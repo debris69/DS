@@ -1,0 +1,20 @@
+
+Infix: A+B-C
+Prefix: -+ABC
+Postfix: AB+C-
+
+Infix: (A+B)*(C+D)
+Prefix: *+AB+CD
+Postfix: AB+CD+*
+
+Infix: A$B*C-D+E/F/(G+H)
+Prefix: +-*$ABCD//EF+GH
+Postfix: AB$C*D-EF/GH+/+
+
+Infix: A-B/(C*D$E)
+Prefix: -A/B*C$DE
+Postfix: ABCDE$*/-
+
+Infix: ((A+B)*C-(D-E))$(F+G)
+Prefix: $-*+ABC-DE+FG
+Postfix: AB+C*DE--FG+$

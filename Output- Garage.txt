@@ -1,0 +1,113 @@
+Enter number of Input Lines (Max 10): 10
+Enter 10 input lines:
+A 123
+A 225
+A 789
+D 225
+A 965
+A 325
+D 123
+A 789
+D 123
+A 665
+Current Garage Status:
+Free parking spots: 10/10
+
+
+Type: A , License: 123
+Parked->  123
+Current Garage Status: 123
+Free parking spots: 9/10
+
+Processing Next Input Line..
+-----------------------------
+
+
+
+Type: A , License: 225
+Parked->  225
+Current Garage Status: 123  225
+Free parking spots: 8/10
+
+Processing Next Input Line..
+-----------------------------
+
+
+
+Type: A , License: 789
+Parked->  789
+Current Garage Status: 123  225  789
+Free parking spots: 7/10
+
+Processing Next Input Line..
+-----------------------------
+
+
+
+Type: D , License: 225
+Departed-> 225
+Current Garage Status: 123  789
+Free parking spots: 8/10
+
+Processing Next Input Line..
+-----------------------------
+
+
+
+Type: A , License: 965
+Parked->  965
+Current Garage Status: 123  789  965
+Free parking spots: 7/10
+
+Processing Next Input Line..
+-----------------------------
+
+
+
+Type: A , License: 325
+Parked->  325
+Current Garage Status: 123  789  965  325
+Free parking spots: 6/10
+
+Processing Next Input Line..
+-----------------------------
+
+
+
+Type: D , License: 123
+Departed-> 123
+Current Garage Status: 789  965  325
+Free parking spots: 7/10
+
+Processing Next Input Line..
+-----------------------------
+
+
+
+Type: A , License: 789
+Car already parked
+
+Processing Next Input Line..
+-----------------------------
+
+
+
+Type: D , License: 123
+No such car parked
+
+Processing Next Input Line..
+-----------------------------
+
+
+
+Type: A , License: 665
+Parked->  665
+Current Garage Status: 789  965  325  665
+Free parking spots: 6/10
+
+Processing Next Input Line..
+-----------------------------
+
+End of Input Lines
+
+Press any key to continue . . .

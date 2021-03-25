@@ -1,0 +1,102 @@
+Menu:
+1.Insert left
+2.Insert right
+3.Delete left
+4.Delete right
+5.Display
+6.Exit
+
+Enter your choice:1
+Enter value: 10
+Inserted: 10
+left-> 10 , right-> 10
+Menu:
+1.Insert left
+2.Insert right
+3.Delete left
+4.Delete right
+5.Display
+6.Exit
+
+Enter your choice:1
+Enter value: 23
+Inserted: 23
+left-> 23 , right-> 10
+Menu:
+1.Insert left
+2.Insert right
+3.Delete left
+4.Delete right
+5.Display
+6.Exit
+
+Enter your choice:2
+Enter value: 52
+Inserted: 52
+left-> 23 , right-> 52
+Menu:
+1.Insert left
+2.Insert right
+3.Delete left
+4.Delete right
+5.Display
+6.Exit
+
+Enter your choice:2
+Enter value: 85
+Inserted: 85
+left-> 23 , right-> 85
+Menu:
+1.Insert left
+2.Insert right
+3.Delete left
+4.Delete right
+5.Display
+6.Exit
+
+Enter your choice:5
+23      10      52      85
+Menu:
+1.Insert left
+2.Insert right
+3.Delete left
+4.Delete right
+5.Display
+6.Exit
+
+Enter your choice:3
+Removed: 23
+left-> 10 , right-> 85
+Menu:
+1.Insert left
+2.Insert right
+3.Delete left
+4.Delete right
+5.Display
+6.Exit
+
+Enter your choice:4
+Removed: 85
+left-> 10 , right-> 52
+Menu:
+1.Insert left
+2.Insert right
+3.Delete left
+4.Delete right
+5.Display
+6.Exit
+
+Enter your choice:5
+10      52
+Menu:
+1.Insert left
+2.Insert right
+3.Delete left
+4.Delete right
+5.Display
+6.Exit
+
+Enter your choice:6
+
+Press any key to continue . . .
+

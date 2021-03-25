@@ -1,0 +1,12 @@
+exp ->
+
+stack ->  ((A+B)*C)
+
+s ->
+
+s1 ->
+
+s2 ->
+
+
+expected output -> ((A+B)*C)
