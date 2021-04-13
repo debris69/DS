@@ -102,5 +102,7 @@ int main(){
    addPolynomial(p1, p2, result);
    printf("\np1+p2->  ");
    printpoly(result);
+   printf("\n" );
+   printpoly(p2);
    return 0;
 }

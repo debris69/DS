@@ -1,98 +1,70 @@
-// C code to implement Priority Queue
-// using Linked List
-#include <stdio.h>
-#include <stdlib.h>
+// C program for RSA asymmetric cryptographic
+// algorithm. For demonstration values are
+// relatively small compared to practical
+// application
+#include<stdio.h>
+#include<math.h>
 
-// Node
-typedef struct node {
-    int data;
-
-    // Lower values indicate higher priority
-    int priority;
-
-    struct node* next;
-
-} Node;
-
-// Function to Create A New Node
-Node* newNode(int d, int p)
+// Returns gcd of a and b
+int gcd(int a, int h)
 {
-    Node* temp = (Node*)malloc(sizeof(Node));
-    temp->data = d;
-    temp->priority = p;
-    temp->next = NULL;
-
-    return temp;
-}
-
-// Return the value at head
-int peek(Node** head)
-{
-    return (*head)->data;
-}
-
-// Removes the element with the
-// highest priority form the list
-void pop(Node** head)
-{
-    Node* temp = *head;
-    (*head) = (*head)->next;
-    free(temp);
-}
-
-// Function to push according to priority
-void push(Node** head, int d, int p)
-{
-    Node* start = (*head);
-
-    // Create new Node
-    Node* temp = newNode(d, p);
-
-    // Special Case: The head of list has lesser
-    // priority than new node. So insert new
-    // node before head node and change head node.
-    if ((*head)->priority > p) { 
-
-        // Insert New Node before head
-        temp->next = *head;
-        (*head) = temp;
-    }
-    else {
-
-        // Traverse the list and find a
-        // position to insert new node
-        while (start->next != NULL &&
-            start->next->priority < p) {
-            start = start->next;
-        }
-
-        // Either at the ends of the list
-        // or at required position
-        temp->next = start->next;
-        start->next = temp;
+    int temp;
+    while (1)
+    {
+        temp = a%h;
+        if (temp == 0)
+          return h;
+        a = h;
+        h = temp;
     }
 }
 
-// Function to check is list is empty
-int isEmpty(Node** head)
-{
-    return (*head) == NULL;
-}
-
-// Driver code
+// Code to demonstrate RSA algorithm
 int main()
 {
-    // Create a Priority Queue
-    // 7->4->5->6
-    Node* pq = newNode(4, 1);
-    push(&pq, 5, 2);
-    push(&pq, 6, 3);
-    push(&pq, 7, 0);
+    // Two random prime numbers
+    double p = 7;
+    double q = 5;
 
-    while (!isEmpty(&pq)) {
-        printf("%d ", peek(&pq));
-        pop(&pq);
+    // First part of public key:
+    double n = p*q;
+
+    // Finding other part of public key.
+    // e stands for encrypt
+    double e = 2;
+    double phi = (p-1)*(q-1);
+    while (e < phi)
+    {
+        // e must be co-prime to phi and
+        // smaller than phi.
+        if (gcd(e, phi)==1)
+            break;
+        else
+            e++;
     }
+
+    // Private key (d stands for decrypt)
+    // choosing d such that it satisfies
+    // d*e = 1 + k * totient
+    int k = 2;  // A constant value
+    double d = (1 + (k*phi))/e;
+
+    printf("%lf, %lf\n",e,d );
+
+    // Message to be encrypted
+    double msg = 20;
+
+    printf("Message data = %lf", msg);
+
+    // Encryption c = (msg ^ e) % n
+    double c = pow(msg, e);
+    c = fmod(c, n);
+    printf("\nEncrypted data = %lf", c);
+
+    // Decryption m = (c ^ d) % n
+    double m = pow(c, d);
+    m = fmod(m, n);
+    printf("\nOriginal Message Sent = %lf", m);
 
     return 0;
 }
